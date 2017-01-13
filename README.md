@@ -12,23 +12,22 @@ Because you can edit anything in your browser in Vim, and you can preview in the
 
 ## Test & Install
 
-First extract MathJax.tar.7z to current directory. So we have:
+First clone this repo and extract MathJax.tar.7z. So we have:
 
 ```
 vim-pandoc-preview
-.
-├── github-markdown.css
-├── LICENSE
-├── MathJax
-│   ├── ...
-│   ├── MathJax.js
-│   └── README.md
-├── preview.sh
-├── README.md
-├── template.html
-└── vim-pandoc-preview.vim
+    ├── github-markdown.css
+    ├── LICENSE
+    ├── MathJax
+    │   ├── ...
+    │   ├── MathJax.js
+    │   └── README.md
+    ├── preview.sh
+    ├── README.md
+    ├── template.html
+    └── vim-pandoc-preview.vim
 
-9 directories, 14 files
+    9 directories, 14 files
 ```
 
 Then test does it work:
@@ -40,7 +39,7 @@ $ sh ./preview.sh README.md > /tmp/vpp.html && firefox /tmp/vpp.html
 If it works, add this to your `~/.profile`:
 
 ```
-export VPP=/home/tzx/git/vim-pandoc-preview
+export VPP=/home/tzx/git/vim-pandoc-preview     # adjust this line
 ```
 
 and add these to your `~/.vimrc`:
