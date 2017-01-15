@@ -1,8 +1,12 @@
 # vim-pandoc-preview
 
+(Only tested on Linux.) | 我还没在 Windows 上跑通。
+
 $$E=mc^2$$
 
 **[It's All Text!](https://addons.mozilla.org/en-US/firefox/addon/its-all-text/) + vim + vim-pandoc-preview → A Fantastic Markdown Editor in everywhere.**
+
+It's All Text 插件 + vim + 本“插件” → 一个好用的 Markdown 编辑器。
 
 Why?
 
@@ -10,9 +14,13 @@ Because you can edit anything in your browser in Vim, and you can preview in the
 
 ![image support is terrible now](preview.png)
 
+为啥？
+
+因为你可以用 Vim 编辑文稿，然后用浏览器预览。如上图所示。
+
 ## Test & Install
 
-First clone this repo and extract MathJax.tar.7z. So we have:
+First clone this repo and extract MathJax.tar.7z. So we have: | 首先你要克隆这个源码，然后解压 MathJax.tar.7z，保证如下的文件结构：
 
 ```
 vim-pandoc-preview
@@ -30,26 +38,26 @@ vim-pandoc-preview
     9 directories, 14 files
 ```
 
-Then test does it work:
+Then test does it work: | 然后试试它能不能用：
 
 ```bash
 $ sh ./preview.sh README.md > /tmp/vpp.html && firefox /tmp/vpp.html
 ```
 
-If it works, add this to your `~/.profile`:
+If it works, add this to your `~/.profile`: | 如果可用，把这一行配置加到 `~/.profile` 里去：
 
 ```
 export VPP=/home/tzx/git/vim-pandoc-preview     # adjust this line
 ```
 
-and add these to your `~/.vimrc`:
+and add these to your `~/.vimrc`: | 还要把这两行加到你的 vimrc：
 
 ```
 " let mapleader = ","
 source $VPP/vim-pandoc-preview.vim
 ```
 
-If you use chrome, change "firefox" to "chrome". Or, "xdg-open".
+If you use chrome, change "firefox" to "chrome". Or, "xdg-open". | 当然你也可以用 chrome 浏览器打开预览用的网页。
 
 ---
 
